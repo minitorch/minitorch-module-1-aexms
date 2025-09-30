@@ -172,7 +172,7 @@ def reduce(
          $x_1 \ldots x_n$ and computes the reduction :math:`fn(x_3, fn(x_2,
          fn(x_1, x_0)))`
     """
-    def cnt(ls: Iterable[float]):
+    def cnt(ls: Iterable[float]) -> float:
         val = start
         for x in ls:
             val = fn(val, x)
