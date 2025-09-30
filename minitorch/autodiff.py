@@ -67,7 +67,7 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
     """
     vis = set()
     res = []
-    def dfs(node):
+    def dfs(node: Variable) -> None:
         if node.unique_id in vis or node.is_constant():
             return
         vis.add(node.unique_id)
